@@ -12,12 +12,16 @@ const search = word => {
     .then(response => {
       let all;
       [all] = response.data.results;
-      ({ id, lexicalEntries } = all);
+      ({ lexicalEntries } = all);
       console.log("\n");
       for (i = 0; i < lexicalEntries.length; i++) {
-        console.log(word + " " + "(" + lexicalEntries[i].lexicalCategory + ")");
         console.log(
-          "1. " +
+          lexicalEntries[i].text +
+            " " +
+            "(" +
+            lexicalEntries[i].lexicalCategory +
+            ")\n" +
+            "1. " +
             lexicalEntries[i].entries[0].senses[0].short_definitions +
             "\n\n"
         );
