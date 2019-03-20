@@ -10,8 +10,7 @@ const search = word => {
     responseType: "json"
   })
     .then(response => {
-      let all;
-      [all] = response.data.results;
+      let [all] = response.data.results;
       ({ lexicalEntries } = all);
       console.log("\n");
       for (i = 0; i < lexicalEntries.length; i++) {

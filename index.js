@@ -8,6 +8,5 @@ const main = () => {
     console.log("Please give me a word");
   }
 };
-main();
 
 module.exports = main;
